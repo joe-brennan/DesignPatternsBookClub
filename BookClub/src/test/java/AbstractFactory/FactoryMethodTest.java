@@ -1,3 +1,5 @@
+package AbstractFactory;
+
 import AbstractFactory.FactoryMethod;
 import org.junit.jupiter.api.Test;
 
