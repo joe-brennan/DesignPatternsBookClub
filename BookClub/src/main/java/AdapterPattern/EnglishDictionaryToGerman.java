@@ -6,11 +6,9 @@ import java.util.stream.Collectors;
 
 public class EnglishDictionaryToGerman implements Dictionary {
     private Map<String, String> content;
-    private GermanToEnglishDictionary dictionary = new GermanToEnglishDictionary();
 
 
-    public EnglishDictionaryToGerman() {
-
+    public EnglishDictionaryToGerman(GermanToEnglishDictionary dictionary) {
         Set<String> words = dictionary.words();
         content = words.stream().collect(
                 Collectors.toMap(
