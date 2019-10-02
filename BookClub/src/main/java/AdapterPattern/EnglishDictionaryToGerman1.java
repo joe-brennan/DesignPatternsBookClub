@@ -1,6 +1,7 @@
 package AdapterPattern;
 
 import java.util.Set;
+import java.util.stream.Collectors;
 
 public class EnglishDictionaryToGerman1 implements Dictionary {
     private GermanToEnglishDictionary dictionary;
@@ -21,7 +22,14 @@ public class EnglishDictionaryToGerman1 implements Dictionary {
     }
 
     // private method which will switch the look up
-    private String convertToEnglish(String from){
+    private String convertToEnglish(String from) {
+//        return dictionary.words().stream().reduce(
+//
+//                        key -> dictionary.lookup(from),
+//                        key -> key
+//                )
+//        );
+//    }
         return null;
     }
 }

@@ -1,14 +1,14 @@
 package AdapterPattern;
 
-import org.testng.annotations.Test;
+import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class ApplyAdapterTest {
-    EnglishDictionaryToGerman dictionary = new EnglishDictionaryToGerman();
-    EnglishDictionaryToGerman advancedDictionary = new EnglishDictionaryToGerman();
-//    EnglishDictionaryToGerman dictionary = new EnglishDictionaryToGerman(new GermanToEnglishDictionary());
-//    EnglishDictionaryToGerman advancedDictionary = new EnglishDictionaryToGerman(new AdvancedGermanToEnglishDictionary());
+//    EnglishDictionaryToGerman dictionary = new EnglishDictionaryToGerman();
+//    EnglishDictionaryToGerman advancedDictionary = new EnglishDictionaryToGerman();
+    EnglishDictionaryToGerman dictionary = new EnglishDictionaryToGerman(new GermanToEnglishDictionary());
+    EnglishDictionaryToGerman advancedDictionary = new EnglishDictionaryToGerman(new AdvancedGermanToEnglishDictionary());
 
     @Test
     public void givenEnglishWordConvertToGermanCorrectly(){
