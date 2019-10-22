@@ -1,11 +1,12 @@
 package AbstractFactory;
 
-public class AbstractFactory {
+import java.math.BigInteger;
+import java.util.*;
 
+public class AbstractFactory {
 
     public interface Chair{
         boolean hasLegs();
-
     }
 
     public interface CoffeeTable{
@@ -22,10 +23,15 @@ public class AbstractFactory {
 
     public class VictorianChair implements Chair{
         @Override
-        public boolean hasLegs() {
+        public boolean hasLegs()
+        {
+            ArrayList arr = new ArrayList();
+            BigInteger bigInt = new BigInteger(String.valueOf(5));
             return true;
         }
     }
+
+
 
     public class ModernCoffeeTable implements CoffeeTable{
         @Override
@@ -54,6 +60,8 @@ public class AbstractFactory {
             return new ModernChair();
 
         }
+
+
 
         @Override
         public CoffeeTable createCoffeeTable() {

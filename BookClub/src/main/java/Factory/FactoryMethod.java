@@ -1,9 +1,7 @@
-package AbstractFactory;
+package Factory;
 
 public class FactoryMethod {
 
-
-    //Normal Factory
     public interface Shape {
         void draw();
     }
@@ -31,17 +29,18 @@ public class FactoryMethod {
 
     public static class ShapeFactory {
         final String shape;
-        public ShapeFactory(String shape){
+
+        public ShapeFactory(String shape) {
             this.shape = shape;
         }
 
-        public Shape getShape(){
-            if(shape == null){
+        public Shape getShape() {
+            if (shape == null) {
                 return null;
             }
-            if(shape.equalsIgnoreCase("CIRCLE")){
+            if (shape.equalsIgnoreCase("CIRCLE")) {
                 return new Circle();
-            } else if(shape.equalsIgnoreCase("RECTANGLE")) {
+            } else if (shape.equalsIgnoreCase("RECTANGLE")) {
                 return new Rectangle();
             }
             return null;
