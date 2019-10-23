@@ -5,11 +5,11 @@ import java.util.*;
 
 public class AbstractFactory {
 
-    public interface Chair{
+    public interface Chair {
         boolean hasLegs();
     }
 
-    public interface CoffeeTable{
+    public interface CoffeeTable {
         boolean hasLegs();
 
     }
@@ -21,10 +21,9 @@ public class AbstractFactory {
         }
     }
 
-    public class VictorianChair implements Chair{
+    public class VictorianChair implements Chair {
         @Override
-        public boolean hasLegs()
-        {
+        public boolean hasLegs() {
             ArrayList arr = new ArrayList();
             BigInteger bigInt = new BigInteger(String.valueOf(5));
             return true;
@@ -32,36 +31,34 @@ public class AbstractFactory {
     }
 
 
-
-    public class ModernCoffeeTable implements CoffeeTable{
+    public class ModernCoffeeTable implements CoffeeTable {
         @Override
         public boolean hasLegs() {
             return true;
         }
     }
 
-    public class VictorianCoffeeTable implements CoffeeTable{
+    public class VictorianCoffeeTable implements CoffeeTable {
         @Override
         public boolean hasLegs() {
             return true;
         }
     }
 
-    public interface FurnitureFactory{
+    public interface FurnitureFactory {
         Chair createChair();
+
         CoffeeTable createCoffeeTable();
 
     }
 
-    public class ModernFurnitureFactory implements FurnitureFactory{
+    public class ModernFurnitureFactory implements FurnitureFactory {
 
         @Override
         public Chair createChair() {
             return new ModernChair();
 
         }
-
-
 
         @Override
         public CoffeeTable createCoffeeTable() {
@@ -70,7 +67,7 @@ public class AbstractFactory {
         }
     }
 
-    public class VictorianFurnitureFactory implements FurnitureFactory{
+    public class VictorianFurnitureFactory implements FurnitureFactory {
 
         @Override
         public Chair createChair() {
